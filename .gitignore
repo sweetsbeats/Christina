@@ -1,0 +1,8 @@
+
+#hide data
+data.lua
+
+*.json
+*.log
+*.txt
+*.ini
