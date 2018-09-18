@@ -6,8 +6,7 @@ require("dice")
 require("responder")
 
 --count number of responses added in data.lua
-responder.getResponseCount()
-
+getResponseCount()
 
 client:on('ready', function()
 	print('Logged in as '.. client.user.username)
@@ -19,11 +18,10 @@ client:on('messageCreate', function(message)
 	end
 	
 	diceRoll(message)
-	responder.checkMessage(client, message)
-	
-	
+	responderRun(client, message)
+
 end)
 
-client:run(botToken)
+client:run(data.botToken)
 
 
