@@ -13,8 +13,8 @@ client:on('ready', function()
 end)
 
 client:on('messageCreate', function(message)
-	if message.content == '!ping' then
-		message.channel:send('Pong!')
+	if message.content == '!help' then
+		message.author:getPrivateChannel():send(helpMsg)
 	end
 	
 	diceRoll(message)
@@ -24,4 +24,6 @@ end)
 
 client:run(data.botToken)
 
-
+helpMsg = ' list of commands! \n\
+						!d{x}:   Rolls an x sided die \n\
+						@kurisu I love you:  Show your love for Christina \n' 
